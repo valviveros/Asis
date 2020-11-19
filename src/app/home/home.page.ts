@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NoticiasService } from '../services/noticias.service';
 interface SectionsI {
   header: {
     title: string

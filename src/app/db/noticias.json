@@ -3,29 +3,74 @@
     "header": {
       "title": "Noticias"
         },
+        "tag":{
+          "title":"Noticias",
+          "img":"https://image.flaticon.com/icons/png/512/88/88142.png",
+          "id":"noticia"
+        },
     "body": {
+      "DivIdBody":"bodyOne",
       "img": "https://picsum.photos/200/300?random=1",
+      "id":"imagen1",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
       "imgSize": 3,
       "contentSize": 9
+        },
+        "bodyDetails":{
+          "divDetails":"DetailsOne",
+          "id":"imagen1",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
+          "backId": "backOne",
+          "imgSizeDetails": 10,
+          "contentSizeDetails": 9
         }
     },
     {
     "header": {
       "title": "Salud"
         },
+        "tag":{
+          "title":"Salud",
+          "img":"https://image.flaticon.com/icons/png/512/88/88142.png",
+          "id":"Salud"
+        },
     "body": {
+      "DivIdBody":"bodyTwo",
       "img": "https://picsum.photos/200/300?random=2",
+      "id":"imagen2",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium."
+        },
+        "bodyDetails":{
+          "divDetails":"DetailsTwo",
+          "id":"imagen2",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
+          "backId": "backTwo",
+          "imgSizeDetails": 10,
+          "contentSizeDetails": 9
         }
     },
     {
         "header": {
           "title": "Economía"
             },
+            "tag":{
+              "title":"Economia",
+              "img":"https://image.flaticon.com/icons/png/512/88/88142.png",
+              "id":"Economía"
+            },
         "body": {
+          "DivIdBody":"bodyThree",
           "img": "https://picsum.photos/200/300?random=3",
+          "id":"imagen3",
           "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium."
+            },
+            "bodyDetails":{
+              "divDetails":"DetailsThree",
+              "id":"imagen3",
+              "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
+              "backId": "backThree",
+              "imgSizeDetails": 10,
+              "contentSizeDetails": 9
             }
         }
 ]

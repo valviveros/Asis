@@ -4,11 +4,26 @@ interface SectionsI {
   header: {
     title: string
   }
+  tag:{
+    title: string
+    img: string
+    id: string
+    
+    // imgSize?: number
+  }
   body: {
     img: string
     content: string
     imgSize?: number
     contentSize?: number
+  }
+  bodyDetails: {
+    divDetails:string,
+    id: string
+    content: string
+    backId: string,
+    imgSizeDetails?: number
+    contentSizeDetails?: number
   }
 }
 
@@ -51,6 +66,69 @@ export class HomePage implements OnInit {
   constructor( private noticiasService: NoticiasService ) { }
 
   ngOnInit() {
+    addEventListener("click",this.onIconClick)   
   }
 
+  onIconClick(){
+    const click = document.getElementById("imagen1");
+    const click2 = document.getElementById("imagen2");
+    const click3 = document.getElementById("imagen3")
+    const back = document.getElementById("backOne");
+    const back2 = document.getElementById("backTwo");
+    const back3 = document.getElementById("backThree")
+
+    console.log(event.target)
+
+    if (event.target == click) {
+      console.log("entró al if")
+      //lo que debe cerrar
+      document.getElementById("DetailsTwo").style.display=""
+      document.getElementById("bodyTwo").style.display=""
+      //lo que debe abrir
+      document.getElementById("DetailsOne").style.display="block"
+      document.getElementById("bodyOne").style.display="none"
+     
+    }else if (event.target == back) {
+      console.log("entró")
+      document.getElementById("DetailsOne").style.display=""
+      document.getElementById("bodyOne").style.display=""
+    }
+    
+
+    if (event.target == click2) {
+      //lo que debe cerrar
+      document.getElementById("DetailsOne").style.display=""
+      document.getElementById("bodyOne").style.display=""
+      //lo que debe abrir
+      document.getElementById("DetailsTwo").style.display="block"
+      document.getElementById("bodyTwo").style.display="none"
+
+
+    }else if (event.target == back2) {
+      console.log("entró al 2")
+      document.getElementById("DetailsTwo").style.display=""
+      document.getElementById("bodyTwo").style.display=""
+    }
+
+    if (event.target == click3) {
+      //lo que debe cerrar
+      document.getElementById("DetailsOne").style.display=""
+      document.getElementById("bodyOne").style.display=""
+
+      document.getElementById("DetailsTwo").style.display=""
+      document.getElementById("bodyTwo").style.display=""
+
+      //lo que debe abrir
+      document.getElementById("DetailsThree").style.display="block"
+      document.getElementById("bodyThree").style.display="none"
+
+
+    }else if (event.target == back3) {
+      console.log("entró al 2")
+      document.getElementById("DetailsThree").style.display=""
+      document.getElementById("bodyThree").style.display=""
+    }
+
+    
+  }
 }

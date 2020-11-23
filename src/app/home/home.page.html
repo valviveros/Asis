@@ -17,9 +17,29 @@
       </ion-col>
     </ion-row>
 
-    <ion-row class="body">
+    <ion-chip class="tag" [id]="section.tag.id">
+      <ion-avatar>
+        <img [src]="section.tag.img">
+      </ion-avatar>
+      <ion-label>{{section.tag.title}}</ion-label>
+      <ion-icon name="close-circle" ></ion-icon>
+    </ion-chip>
+
+    <div class="details" [id]="section.bodyDetails.divDetails">
+      <ion-row class="bodyDetails" id="body2">
+        <ion-row [size]="section.bodyDetails.imgSize && section.bodyDetails.imgSize || sectionsConfig.imgSize">
+          <img [src]="section.body.img" [id]="section.body.img" >
+        </ion-row>
+        <ion-row [size]="section.bodyDetails.contentSizeDetails && section.bodyDetails.contentSize || sectionsConfig.contentSizeDetails" class="content">
+          {{section.bodyDetails.content}}
+        </ion-row>
+        <ion-button color="success" [id]="section.bodyDetails.backId" style="margin:15px;">Back</ion-button>
+      </ion-row>
+    </div>
+
+    <ion-row class="body" [id]="section.body.DivIdBody">
       <ion-col [size]="section.body.imgSize && section.body.imgSize || sectionsConfig.imgSize">
-        <img [src]="section.body.img" alt="">
+        <img [src]="section.body.img" [id]="section.body.id">
       </ion-col>
       <ion-col [size]="section.body.contentSize && section.body.contentSize || sectionsConfig.contentSize" class="content">
         {{section.body.content}}

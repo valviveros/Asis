@@ -34,10 +34,32 @@ ion-menu-button {
         font-size: 150%;
       }
     }
-    .body{
-      img{
-        
+
+    
+    .details {
+      z-index: 100;
+      width: 100 vw;
+      background-color: whitesmoke;
+      border-radius: 10px;
+      display: none;
+      margin: 10px;
+      box-shadow: 6px 6px 8px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 6px 6px 8px 1px rgba(0, 0, 0, 0.2);
+
+      img {
+        width: 100vw;
+        height: 400px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
       }
+
+      .content{
+        text-align: justify;
+        margin: 15px;
+      }
+    }
+    .body{
       .content{
         text-align: justify;
       }

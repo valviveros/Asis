@@ -40,6 +40,7 @@ export class HomePage implements OnInit {
   }
   
   sections: Array<SectionsI> = this.noticiasService.getAll();
+  textoBuscar = '';
   // sections: Array<SectionsI> = [
   //   {
   //     header: {
@@ -66,7 +67,7 @@ export class HomePage implements OnInit {
   constructor( private noticiasService: NoticiasService ) { }
 
   ngOnInit() {
-    addEventListener("click",this.onIconClick)   
+    addEventListener("click",this.onIconClick);   
   }
 
   onIconClick(){
@@ -130,5 +131,11 @@ export class HomePage implements OnInit {
     }
 
     
+  }
+
+  buscar(event){
+    this.textoBuscar = event.detail.value;
+    console.log(this.noticiasService.getBytitle(this.textoBuscar));
+
   }
 }

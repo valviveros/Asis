@@ -8,9 +8,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar showCancelButton="always"></ion-searchbar>
+  <ion-searchbar showCancelButton="always" (ionChange)="buscar($event)">
+    
+  </ion-searchbar>
 
-  <ion-grid class="section" *ngFor="let section of sections">
+  <ion-grid class="section" *ngFor="let section of sections ">
     <ion-row class="header">
       <ion-col class="title">
         {{section.header.title}}

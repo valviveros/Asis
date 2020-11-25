@@ -8,45 +8,110 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar showCancelButton="always" (ionChange)="buscar($event)">
-    
+  <ion-searchbar showCancelButton="always" (ionChange)="buscar($event)" >
+
   </ion-searchbar>
-  
+
   <ion-grid class="section" *ngFor="let section of sections ">
     <ion-row class="header">
-      <ion-col class="title" [id]="section.header.id">
+      <ion-col class="title" [id]="section.header.id" style="margin-left: 7px;">
         {{section.header.title}}
       </ion-col>
     </ion-row>
 
-    <ion-chip class="tag" [id]="section.tag.id">
+
+    <ion-chip class="tag" [id]="section.tag.id" style="margin-left: 7px;">
       <ion-avatar>
         <img [src]="section.tag.img">
       </ion-avatar>
       <ion-label>{{section.tag.title}}</ion-label>
-      <ion-icon name="close-circle" ></ion-icon>
+      <ion-icon name="close-circle"></ion-icon>
     </ion-chip>
 
-    <div class="details" [id]="section.bodyDetails.divDetails">
-      <ion-row class="bodyDetails" id="body2">
-        <ion-row [size]="section.bodyDetails.imgSize && section.bodyDetails.imgSize || sectionsConfig.imgSize">
-          <img [src]="section.body.img" [id]="section.body.img" >
-        </ion-row>
-        <ion-row [size]="section.bodyDetails.contentSizeDetails && section.bodyDetails.contentSize || sectionsConfig.contentSizeDetails" class="content">
-          {{section.bodyDetails.content}}
-        </ion-row>
-        <ion-button color="success" [id]="section.bodyDetails.backId" style="margin:15px;">Back</ion-button>
-      </ion-row>
-    </div>
+    
 
-    <ion-row class="body" [id]="section.body.DivIdBody">
-      <ion-col [size]="section.body.imgSize && section.body.imgSize || sectionsConfig.imgSize">
-        <img [src]="section.body.img" [id]="section.body.id">
+  
+
+
+    <ion-col class="body" >
+      <!-- B -->
+
+      <ion-row class="header">
+        <ion-row class="title">
+          {{section.body.categoria}}
+        </ion-row>
+      </ion-row>
+      
+
+
+      <!-- C -->
+      <ion-row>
+        <b> {{section.body.bodyB.headerC.titleC}}</b>
+      </ion-row>
+
+      <div class="details" [id]="section.bodyDetails.divDetails">
+        <ion-row class="bodyDetails" id="body2">
+          <ion-row [size]="section.bodyDetails.imgSize && section.bodyDetails.imgSize || sectionsConfig.imgSize">
+            <img [src]="section.bodyDetails.img" [id]="section.bodyDetails.id">
+          </ion-row>
+          <ion-row [size]="section.bodyDetails.contentSizeDetails && section.bodyDetails.contentSize || sectionsConfig.contentSizeDetails" class="content">
+            {{section.bodyDetails.content}}<br><ion-button color="success" [id]="section.bodyDetails.backId" style="margin-top:15px;">Back</ion-button>
+  
+          </ion-row>
+          
+        </ion-row>
+      </div>
+
+      <ion-row [id]="section.body.bodyB.id">
+
+        <ion-col
+          [size]="section.body.bodyB.bodyC.imgSizeC && section.body.bodyB.bodyC.imgSizeC || sectionsConfig.imgSize">
+          <img [src]="section.body.bodyB.bodyC.imgC" alt="" [id]="section.body.bodyB.bodyC.id">
+        </ion-col>
+
+        <ion-col
+          [size]="section.body.bodyB.bodyC.contentSizeC && section.body.bodyB.bodyC.contentSizeC || sectionsConfig.contentSize"
+          class="content">
+          {{section.body.bodyB.bodyC.contentC}}
+        </ion-col>
+
+      </ion-row>
+
+      <ion-col class="body">
+        <!-- 2 -->
+        <ion-row>
+          <b>{{section.body.bodyB2.headerC2.titleC2}}</b>
+        </ion-row>
+
+
+        <div class="details" [id]="section.bodyDetails2.divDetails">
+          <ion-row class="bodyDetails" id="body2">
+            <ion-row [size]="section.bodyDetails2.imgSize && section.bodyDetails2.imgSize || sectionsConfig.imgSize">
+              <img [src]="section.bodyDetails2.img" [id]="section.bodyDetails2.id">
+            </ion-row>
+            <ion-row [size]="section.bodyDetails2.contentSizeDetails && section.bodyDetails2.contentSize || sectionsConfig.contentSizeDetails" class="content">
+              {{section.bodyDetails2.content}}<br><ion-button color="success" [id]="section.bodyDetails2.backId" style="margin-top:15px;">Back</ion-button>
+    
+            </ion-row>
+            
+          </ion-row>
+        </div>
+
+        <ion-row [id]="section.body.bodyB2.id2" >
+          <ion-col
+            [size]="section.body.bodyB2.bodyC2.imgSizeC2 && section.body.bodyB2.bodyC2.imgSizeC2 || sectionsConfig.imgSize">
+            <img [src]="section.body.bodyB2.bodyC2.imgC2" alt="" [id]="section.body.bodyB2.bodyC2.id">
+          </ion-col>
+
+          <ion-col
+            [size]="section.body.bodyB2.bodyC2.contentSizeC2 && section.body.bodyB2.bodyC2.contentSizeC2 || sectionsConfig.contentSize"
+            class="content">
+            {{section.body.bodyB2.bodyC2.contentC2}}
+          </ion-col>
+        </ion-row>
+
       </ion-col>
-      <ion-col [size]="section.body.contentSize && section.body.contentSize || sectionsConfig.contentSize" class="content">
-        {{section.body.content}}
-      </ion-col>
-    </ion-row>
+    </ion-col>
 
   </ion-grid>
 

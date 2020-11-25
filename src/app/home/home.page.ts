@@ -5,22 +5,55 @@ interface SectionsI {
     title: string
     id: string
   }
-  tag:{
+  tag: {
     title: string
     img: string
     id: string
-    
+
     // imgSize?: number
   }
   body: {
-    img: string
-    content: string
-    imgSize?: number
-    contentSize?: number
+    categoria: string
+    bodyB: {
+      id:string
+      headerC: {
+        titleC: string
+      }
+      bodyC: {
+        id: string
+        imgC: string
+        contentC: string
+        imgSizeC?: number
+        contentSizeC?: number
+      }
+    }
+    bodyB2: {
+      id2:string
+      headerC2: {
+        titleC2: string
+      }
+      bodyC2: {
+        id:string
+        imgC2: string
+        contentC2: string
+        imgSizeC2?: number
+        contentSizeC2?: number
+      }
+    }
   }
   bodyDetails: {
-    divDetails:string,
+    divDetails: string,
     id: string
+    img: string
+    content: string
+    backId: string,
+    imgSizeDetails?: number
+    contentSizeDetails?: number
+  }
+  bodyDetails2: {
+    divDetails: string,
+    id: string
+    img: string
     content: string
     backId: string,
     imgSizeDetails?: number
@@ -39,7 +72,7 @@ export class HomePage implements OnInit {
     imgSize: 3,
     contentSize: 9
   }
-  
+
   sections: Array<SectionsI> = this.noticiasService.getAll();
   textoBuscar = '';
   // sections: Array<SectionsI> = [
@@ -65,13 +98,13 @@ export class HomePage implements OnInit {
   //   }
   // ]
 
-  constructor( private noticiasService: NoticiasService ) { }
+  constructor(private noticiasService: NoticiasService) { }
 
   ngOnInit() {
-    addEventListener("click",this.onIconClick);   
+    addEventListener("click", this.onIconClick);
   }
 
-  onIconClick(){
+  onIconClick() {
     const click = document.getElementById("imagen1");
     const click2 = document.getElementById("imagen2");
     const click3 = document.getElementById("imagen3")
@@ -79,76 +112,151 @@ export class HomePage implements OnInit {
     const back2 = document.getElementById("backTwo");
     const back3 = document.getElementById("backThree")
 
+    const click4 = document.getElementById("imagen4");
+    const click5 = document.getElementById("imagen5");
+    const click6 = document.getElementById("imagen6");
+    const back4 = document.getElementById("backOne_2");
+    const back5 = document.getElementById("backTwo_2");
+    const back6 = document.getElementById("backThree_2");
+
+
     console.log(event.target)
-
+    //primera imagen
     if (event.target == click) {
-      console.log("entró al if")
-      //lo que debe cerrar
-      document.getElementById("DetailsTwo").style.display=""
-      document.getElementById("bodyTwo").style.display=""
-      //lo que debe abrir
       document.getElementById("DetailsOne").style.display="block"
-      document.getElementById("bodyOne").style.display="none"
-     
-    }else if (event.target == back) {
-      console.log("entró")
-      document.getElementById("DetailsOne").style.display=""
-      document.getElementById("bodyOne").style.display=""
-    }
-    
+      document.getElementById("Body1").style.display="none"
 
+    }else if(event.target == back){
+      document.getElementById("DetailsOne").style.display=""
+      document.getElementById("Body1").style.display=""
+
+    }
+
+    //segunda imagen
     if (event.target == click2) {
-      //lo que debe cerrar
-      document.getElementById("DetailsOne").style.display=""
-      document.getElementById("bodyOne").style.display=""
-      //lo que debe abrir
       document.getElementById("DetailsTwo").style.display="block"
-      document.getElementById("bodyTwo").style.display="none"
-
-
-    }else if (event.target == back2) {
-      console.log("entró al 2")
+      document.getElementById("BodyThree").style.display="none"
+      
+    }else if(event.target == back2){
       document.getElementById("DetailsTwo").style.display=""
-      document.getElementById("bodyTwo").style.display=""
-    }
+      document.getElementById("BodyThree").style.display=""
 
+    }
+    //tercera imagen
     if (event.target == click3) {
-      //lo que debe cerrar
-      document.getElementById("DetailsOne").style.display=""
-      document.getElementById("bodyOne").style.display=""
-
-      document.getElementById("DetailsTwo").style.display=""
-      document.getElementById("bodyTwo").style.display=""
-
-      //lo que debe abrir
       document.getElementById("DetailsThree").style.display="block"
-      document.getElementById("bodyThree").style.display="none"
-
-
-    }else if (event.target == back3) {
-      console.log("entró al 2")
+      document.getElementById("Body5").style.display="none"
+    }else if(event.target == back3){
       document.getElementById("DetailsThree").style.display=""
-      document.getElementById("bodyThree").style.display=""
+      document.getElementById("Body5").style.display=""
+
     }
 
-    
+    //cuarta imagen
+    if (event.target == click4) {
+      console.log("entró")
+      document.getElementById("DetailsOne_2").style.display="block"
+      document.getElementById("Body2").style.display="none"
+    }else if(event.target == back4){
+      document.getElementById("DetailsOne_2").style.display=""
+      document.getElementById("Body2").style.display=""
+
+    }
+
+    //quinta imagen
+    if (event.target == click5) {
+      console.log("entró")
+      document.getElementById("DetailsTwo_2").style.display="block"
+      document.getElementById("Body4").style.display="none"
+    }else if(event.target == back5){
+      document.getElementById("DetailsTwo_2").style.display=""
+      document.getElementById("Body4").style.display=""
+
+    }
+
+
+    //sexta imagen
+    if (event.target == click6) {
+      console.log("entró")
+      document.getElementById("DetailsThree_2").style.display="block"
+      document.getElementById("Body6").style.display="none"
+    }else if(event.target == back6){
+      document.getElementById("DetailsThree_2").style.display=""
+      document.getElementById("Body6").style.display=""
+
+    }
+
+
+
+
+    // if (event.target == click) {
+    //   console.log("entró al if")
+    //   //lo que debe cerrar
+    //   document.getElementById("DetailsTwo").style.display=""
+    //   document.getElementById("bodyTwo").style.display=""
+    //   //lo que debe abrir
+    //   document.getElementById("DetailsOne").style.display="block"
+    //   document.getElementById("bodyOne").style.display="none"
+
+    // }else if (event.target == back) {
+    //   console.log("entró")
+    //   document.getElementById("DetailsOne").style.display=""
+    //   document.getElementById("bodyOne").style.display=""
+    // }
+
+
+    // if (event.target == click2) {
+    //   //lo que debe cerrar
+    //   document.getElementById("DetailsOne").style.display=""
+    //   document.getElementById("bodyOne").style.display=""
+    //   //lo que debe abrir
+    //   document.getElementById("DetailsTwo").style.display="block"
+    //   document.getElementById("bodyTwo").style.display="none"
+
+
+    // }else if (event.target == back2) {
+    //   console.log("entró al 2")
+    //   document.getElementById("DetailsTwo").style.display=""
+    //   document.getElementById("bodyTwo").style.display=""
+    // }
+
+    // if (event.target == click3) {
+    //   //lo que debe cerrar
+    //   document.getElementById("DetailsOne").style.display=""
+    //   document.getElementById("bodyOne").style.display=""
+
+    //   document.getElementById("DetailsTwo").style.display=""
+    //   document.getElementById("bodyTwo").style.display=""
+
+    //   //lo que debe abrir
+    //   document.getElementById("DetailsThree").style.display="block"
+    //   document.getElementById("bodyThree").style.display="none"
+
+
+    // }else if (event.target == back3) {
+    //   console.log("entró al 2")
+    //   document.getElementById("DetailsThree").style.display=""
+    //   document.getElementById("bodyThree").style.display=""
+    // }
+
+
   }
 
-  initializeItems(){
-    this.sections= this.noticiasService.getAll();
+  initializeItems() {
+    this.sections = this.noticiasService.getAll();
   }
 
-  buscar(event: any){
+  buscar(event: any) {
     const valor = event.target.value;
-      this.initializeItems()
-      if (valor && valor.trim() != '') {
-        this.sections= this.sections.filter((item) => {
-         
+    this.initializeItems()
+    if (valor && valor.trim() != '') {
+      this.sections = this.sections.filter((item) => {
+
         return (item.header.title.toLowerCase().indexOf(valor.toLowerCase()) > -1);
       })
     }
   }
-  
+
 
   // buscar(event){
   //   this.textoBuscar = event.detail.value;
@@ -171,9 +279,9 @@ export class HomePage implements OnInit {
   //       document.getElementById("EconomiaTitle").style.display="none"
 
   //     }
-    
+
   //   })
-    
+
 
   // }
 }

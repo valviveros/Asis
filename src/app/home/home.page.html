@@ -18,12 +18,52 @@
     </ion-row>
 
     <ion-row class="body">
-      <ion-col [size]="section.body.imgSize && section.body.imgSize || sectionsConfig.imgSize">
-        <img [src]="section.body.img" alt="">
-      </ion-col>
-      <ion-col [size]="section.body.contentSize && section.body.contentSize || sectionsConfig.contentSize" class="content">
-        {{section.body.content}}
-      </ion-col>
+      <!-- B -->
+      <ion-grid class="section">
+        <ion-row class="header">
+          <ion-col class="title">
+            {{section.body.categoria}}
+          </ion-col>
+        </ion-row>
+        <ion-row class="body">
+          <!-- C -->
+          <ion-grid class="section">
+            <ion-row class="header">
+              <ion-col>
+                <b>{{section.body.bodyB.headerC.titleC}}</b>
+              </ion-col>
+            </ion-row>
+            <ion-col
+              [size]="section.body.bodyB.bodyC.imgSizeC && section.body.bodyB.bodyC.imgSizeC || sectionsConfig.imgSize">
+              <img [src]="section.body.bodyB.bodyC.imgC" alt="">
+            </ion-col>
+            <ion-col
+              [size]="section.body.bodyB.bodyC.contentSizeC && section.body.bodyB.bodyC.contentSizeC || sectionsConfig.contentSize"
+              class="content">
+              {{section.body.bodyB.bodyC.contentC}}
+            </ion-col>
+          </ion-grid>
+        </ion-row>
+        <ion-row class="body">
+          <!-- 2 -->
+          <ion-grid class="section">
+            <ion-row class="header">
+              <ion-col>
+                <b>{{section.body.bodyB2.headerC2.titleC2}}</b>
+              </ion-col>
+            </ion-row>
+            <ion-col
+              [size]="section.body.bodyB2.bodyC2.imgSizeC2 && section.body.bodyB2.bodyC2.imgSizeC2 || sectionsConfig.imgSize">
+              <img [src]="section.body.bodyB2.bodyC2.imgC2" alt="">
+            </ion-col>
+            <ion-col
+              [size]="section.body.bodyB2.bodyC2.contentSizeC2 && section.body.bodyB2.bodyC2.contentSizeC2 || sectionsConfig.contentSize"
+              class="content">
+              {{section.body.bodyB2.bodyC2.contentC2}}
+            </ion-col>
+          </ion-grid>
+        </ion-row>
+      </ion-grid>
     </ion-row>
 
   </ion-grid>

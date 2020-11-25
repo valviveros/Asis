@@ -1,31 +1,60 @@
 [
-    {
+  {
     "header": {
       "title": "Noticias"
-        },
-    "body": {
-      "img": "https://picsum.photos/200/300?random=1",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
-      "imgSize": 3,
-      "contentSize": 9
-        }
     },
-    {
+    "body": {
+      "categoria": "Entretenimiento",
+      "bodyB": {
+        "headerC": {
+          "titleC": "Krol-G"
+        },
+        "bodyC": {
+          "imgC": "https://picsum.photos/200/300?random=1",
+          "contentC": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
+          "imgSizeC": 3,
+          "contentSizeC": 9
+        }
+      },
+      "bodyB2": {
+        "headerC2": {
+          "titleC2": "Kylie Jenner"
+        },
+        "bodyC2": {
+          "imgC2": "https://picsum.photos/200/300?random=2",
+          "contentC2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
+          "imgSizeC2": 3,
+          "contentSizeC2": 9
+        }
+      }
+    }
+  },
+  {
     "header": {
       "title": "Salud"
-        },
-    "body": {
-      "img": "https://picsum.photos/200/300?random=2",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium."
-        }
     },
-    {
-        "header": {
-          "title": "Economía"
-            },
-        "body": {
-          "img": "https://picsum.photos/200/300?random=3",
-          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium."
-            }
+    "body": {
+      "categoria": "Cocina",
+      "bodyB": {
+        "headerC": {
+          "titleC": "Veggies"
+        },
+        "bodyC": {
+          "imgC": "https://picsum.photos/200/300?random=3",
+          "contentC": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium."
         }
+      },
+      "bodyB2": {
+        "headerC2": {
+          "titleC2": "Veggie Jenner"
+        },
+        "bodyC2": {
+          "imgC2": "https://picsum.photos/200/300?random=4",
+          "contentC2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, earum cumque laudantium accusantium fugiat saepe cupiditate perspiciatis commodi quod tempore illo doloribus mollitia et veniam debitis sequi accusamus vitae! Laudantium.",
+          "imgSizeC2": 3,
+          "contentSizeC2": 9
+        }
+      }
+    }
+  }
 ]

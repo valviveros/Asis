@@ -1,7 +1,8 @@
 [
     {
     "header": {
-      "title": "Noticias"
+      "title": "Noticias",
+      "id":"NoticiaTitle"
         },
         "tag":{
           "title":"Noticias",
@@ -27,7 +28,9 @@
     },
     {
     "header": {
-      "title": "Salud"
+      "title": "Salud",
+      "id":"SaludTitle"
+
         },
         "tag":{
           "title":"Salud",
@@ -51,7 +54,9 @@
     },
     {
         "header": {
-          "title": "Economía"
+          "title": "Economía",
+          "id":"EconomiaTitle"
+
             },
             "tag":{
               "title":"Economia",

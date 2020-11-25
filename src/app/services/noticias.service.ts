@@ -19,22 +19,24 @@ export class NoticiasService {
   //   }
   //   return Noticia[0];
   // }
-  getBytitle(e: string): Array<NoticiasI> {
-    const Noticias: Array<NoticiasI> = db;
+  // getBytitle(e: string): Array<NoticiasI> {
+  //   const Noticias: Array<NoticiasI> = db;
     
-    // console.log(digimon.name.normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
-    const Match = Noticias.filter(function(evento){
-      // console.log(evento.header.title)
-      if (e === evento.header.title) {
-        return evento.header.title
-      }
-    })
-    // if (matches.length < 1) {
-    //   throw "No se encontró la noticia"
+  //   // console.log(digimon.name.normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+  //   const Match = Noticias.filter(function(evento){
+  //     // console.log(evento.header.title)
+  //     if (e === evento.header.title) {
+  //       return evento.header.title
+  //     }
+  //   })
+  //   // if (matches.length < 1) {
+  //   //   throw "No se encontró la noticia"
 
-    // }
-    return Match
-  }
+  //   // }
+  //   return Match
+  // }
+
+  
   constructor() { }
 
 

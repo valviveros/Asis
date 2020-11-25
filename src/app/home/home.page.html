@@ -11,10 +11,10 @@
   <ion-searchbar showCancelButton="always" (ionChange)="buscar($event)">
     
   </ion-searchbar>
-
+  
   <ion-grid class="section" *ngFor="let section of sections ">
     <ion-row class="header">
-      <ion-col class="title">
+      <ion-col class="title" [id]="section.header.id">
         {{section.header.title}}
       </ion-col>
     </ion-row>

@@ -3,6 +3,7 @@ import { NoticiasService } from '../services/noticias.service';
 interface SectionsI {
   header: {
     title: string
+    id: string
   }
   tag:{
     title: string
@@ -133,9 +134,46 @@ export class HomePage implements OnInit {
     
   }
 
-  buscar(event){
-    this.textoBuscar = event.detail.value;
-    console.log(this.noticiasService.getBytitle(this.textoBuscar));
-
+  initializeItems(){
+    this.sections= this.noticiasService.getAll();
   }
+
+  buscar(event: any){
+    const valor = event.target.value;
+      this.initializeItems()
+      if (valor && valor.trim() != '') {
+        this.sections= this.sections.filter((item) => {
+         
+        return (item.header.title.toLowerCase().indexOf(valor.toLowerCase()) > -1);
+      })
+    }
+  }
+  
+
+  // buscar(event){
+  //   this.textoBuscar = event.detail.value;
+  //   let valor = this.noticiasService.getBytitle(this.textoBuscar)
+  //   valor.filter(function(evento){
+  //     if (evento.header.title=="Noticias") {
+  //       document.getElementById("bodyTwo").style.display="none"
+  //       document.getElementById("bodyThree").style.display="none"
+  //       document.getElementById("Salud").style.display="none"
+  //       document.getElementById("Economía").style.display="none"
+  //       document.getElementById("SaludTitle").style.display="none"
+  //       document.getElementById("EconomiaTitle").style.display="none"
+
+  //     }if (evento.header.title=="Salud") {
+  //       document.getElementById("bodyOne").style.display="none"
+  //       document.getElementById("bodyThree").style.display="none"
+  //       document.getElementById("noticia").style.display="none"
+  //       document.getElementById("Economía").style.display="none"
+  //       document.getElementById("NoticiaTitle").style.display="none"
+  //       document.getElementById("EconomiaTitle").style.display="none"
+
+  //     }
+    
+  //   })
+    
+
+  // }
 }

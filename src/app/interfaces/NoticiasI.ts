@@ -1,6 +1,7 @@
 export interface NoticiasI {
     header: {
         title: string
+        id: string
     }
     tag:{
         title: string
